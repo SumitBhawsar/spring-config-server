@@ -1,0 +1,10 @@
+logging.level.org.springframework: DEBUG
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: 'https://github.com/SumitBhawsar/{application}-config.git'
+          username: ${git.username}
+          password: ${git.password}
+          timeout: 60

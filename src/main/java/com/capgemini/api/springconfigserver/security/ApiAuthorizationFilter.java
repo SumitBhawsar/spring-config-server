@@ -83,7 +83,9 @@ public class ApiAuthorizationFilter extends OncePerRequestFilter {
     private void addErrorResponse(HttpServletResponse response, String message, int code) throws IOException {
         PrintWriter pr = new PrintWriter(response.getOutputStream());
         pr.write("{ \"error\" : \""+message +"\"}");
+
         response.setStatus(code);
         response.setContentType(APPLICATION_JSON_VALUE);
+        pr.flush();
     }
 }

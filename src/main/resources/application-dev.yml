@@ -8,3 +8,10 @@ spring:
           username: ${git.username}
           password: ${git.password}
           timeout: 60
+        encrypt:
+          enabled: true
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'

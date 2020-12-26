@@ -1,0 +1,12 @@
+#server.error.whitelabel.enabled=false
+#error.whitelabel.enabled=false
+encrypt:
+  rsa:
+    algorithm: oaep
+    salt: deadbeef
+    strong: false
+  key-store:
+    alias: mytestkey
+    password: changeit
+    secret: changeit
+    location: file:config/property-cipher.jks

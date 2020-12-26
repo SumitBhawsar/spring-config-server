@@ -5,7 +5,9 @@ spring:
       server:
         git:
           uri: 'https://github.com/SumitBhawsar/{application}-config.git'
-          username: ${git.username}
+#          username: ${git.username}
+          username: '{cipher}AQAWx6Q7b3NHFGolidiimjuIXq1Ml8mZu0rqbIcWwyxoW8oY7bmjsBB1SwD2LJ9esSGdFO5zbMWZJWlbpW1UDy0pRXYdiuEH4dO74xMazdDleHD0C9KtrIkuUVSt6Lqa+DE8U7xq3sIngO3razJIPB+DPkJuBRvnA/dOPwAi++FiOsOcddcAqKvsiloLjFjgs5A5/cGDRsa7IiJDjeu8KxNUJ3LxAIsFiESD0QQCXT0++g8RxkM+FFMXLrokS/6+xT+k2orDOrTzGHfV8nAdy753fSpohXohCkPED20iseFanT35PO/qbgLhEi1J7D9BmYu5zOd5IgVtTG2Oqj1a2/V4TV94rSR3+TLXKdEG49P2N54PU9oIPvmKJUy1L1pPgL0='
+#          password: '{cipher}AQASWk2O.................'
           password: ${git.password}
           timeout: 60
         encrypt:

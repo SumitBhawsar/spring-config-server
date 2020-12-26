@@ -21,3 +21,4 @@ management:
     jmx:
       exposure:
         include: '*'
+jwks.url: http://localhost:10111/jwks.json

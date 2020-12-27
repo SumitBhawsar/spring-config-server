@@ -4,7 +4,7 @@ logging.level:
     springframework:
       cloud: DEBUG
       vault: DEBUG
-    eclipse.jgit.api: DEBUG
+    eclipse.jgit: DEBUG
 spring:
   cloud:
     config:
@@ -12,7 +12,7 @@ spring:
         git:
           uri: 'https://github.com/SumitBhawsar/{application}-config.git'
           username: ${git.vault.username}
-          password: ${git.password}
+          password: ${zgit.password}
           timeout: 60
         encrypt:
           enabled: true

@@ -31,7 +31,7 @@ public class ApiAuthorizationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String requestedUri = request.getRequestURI();
-        if(requestedUri.startsWith("/actuator")){
+        if(requestedUri.startsWith("/actuator") || requestedUri.startsWith("/monitor") ){
             filterChain.doFilter(request, response);
         }else {
             String jwtToken = request.getHeader(HttpHeaders.AUTHORIZATION);

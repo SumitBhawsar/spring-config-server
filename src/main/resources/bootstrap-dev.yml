@@ -22,3 +22,7 @@ encrypt:
     password: ${ENCRYPT_STOREPASS}
     secret: ${ENCRYPT_KEYPASS}
     location: file:config/property-cipher.jks
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka

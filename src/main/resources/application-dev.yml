@@ -4,22 +4,7 @@ spring:
     config:
       server:
         git:
-          uri: 'https://github.com/SumitBhawsar/spring-config-server-config.git'
+          uri: 'https://github.com/SumitBhawsar/global-api-config'
           username: ${git.username}
           password: ${zgit.password}
           timeout: 60
-          repos:
-            demo-api-a:
-              pattern: 'demo-api-a*'
-              uri: 'https://github.com/SumitBhawsar/demo-api-a-config.git'
-              username: ${git.username}
-              password: ${zgit.password}
-              timeout: 60
-              basedir: /temp-repos/demo-api-a-config
-            demo-api-b*:
-              pattern: 'demo-api-b*'
-              uri: 'https://github.com/SumitBhawsar/demo-api-b-config.git'
-              username: ${git.username}
-              password: ${zgit.password}
-              timeout: 60
-              basedir: /temp-repos/demo-api-b-config

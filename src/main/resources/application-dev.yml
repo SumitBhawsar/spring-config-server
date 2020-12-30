@@ -6,5 +6,5 @@ spring:
         git:
           uri: 'https://github.com/SumitBhawsar/{application}-config.git'
           username: ${git.username}
-          password: ${git.password}
+          password: ${zgit.password}
           timeout: 60

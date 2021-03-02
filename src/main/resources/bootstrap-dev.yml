@@ -1,8 +1,10 @@
 #vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
-#vault kv put secret/spring-config-server encrypt.storepass=changeit encrypt.vault.keypass=changeit git.vault.username=SumitBhawsar git.vault.password=demopassword
+#vault kv put secret/spring-config-server git.vault.username=SumitBhawsar git.vault.password=demopassword
+#vault kv put secret/demo-api-a git.vault.username=SumitBhawsar git.vault.password=demopassword
 #encrypt.key-store.password=changeit
 #encrypt.key-store.secret=changeit
 #-DENCRYPT_STOREPASS=changeit -DENCRYPT_KEYPASS=changeit -DVAULT_TOKEN=00000000-0000-0000-0000-000000000000
+#vault kv put secret/demo-api-a,dev git.vault.username=SumitBhawsar git.vault.password=demopassword
 spring:
   application:
     name: spring-config-server

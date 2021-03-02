@@ -1,23 +1,39 @@
 
 logging.level:
+  org.springframework.web.client: TRACE
+  org.apache.http: DEBUG
   org:
     springframework:
+      web: DEBUG
       cloud: DEBUG
       vault: DEBUG
-    eclipse.jgit.api: DEBUG
 spring:
   cloud:
     config:
       server:
         git:
           uri: 'https://github.com/SumitBhawsar/{application}-config.git'
-          username: ${git.vault.username}
-          password: ${git.password}
+          username: ${git.username}
+          password: ${zgit.password}
           timeout: 60
+        vault:
+          host: localhost
+          port: 8200
+          kv-version: 1
+          token: 00000000-0000-0000-0000-000000000000
+          namespace: /secret/data
+          authentication: token
+          backend: secret/data
+
+
         encrypt:
           enabled: true
+    bus:
+      enabled: false
+
 management:
   endpoints:
     jmx:
       exposure:
         include: '*'
+jwks.url: http://localhost:10111/jwks.json
